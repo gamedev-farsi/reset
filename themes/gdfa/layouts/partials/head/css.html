@@ -1,0 +1,17 @@
+{{ $cssFiles := slice "css/main.css" "css/custom.css" }}
+{{ range $cssFiles }}
+{{ with resources.Get . }}
+{{ if eq hugo.Environment "development" }}
+<link rel="stylesheet" href="{{ .RelPermalink }}">
+{{ else }}
+{{ with . | minify | fingerprint }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+{{ end }}
+{{ end }}
+{{ end }}
+{{ end }}
+<ul>
+  {{ range .Site.Taxonomies.series.golang }}
+  <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a></li>
+  {{ end }}
+</ul>

@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div class="container">
+    {{ .Content }}
+    <hr />
+    <div class="container-grid">
+        {{ range .Paginator.Pages }}
+    <div class="card">
+      <a href="{{ .RelPermalink }}">{{ .Params.Fa | truncate 23 }}</a>
+      <p>{{ .Params.En | truncate 23}}</p>
+      <code>#{{ .Params.Number }}</code>
+    </div>
+    {{ end }}
+    </div>
+    <hr />
+  {{ template "_internal/pagination.html" . }}
+</div>
+
+{{ end }}

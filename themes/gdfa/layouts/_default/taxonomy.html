@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="container">
+    <h1 class="title">تگ ها</h1>
+    <p>{{ .Content }}</p>
+    <div class="container-grid">
+        {{ range .Pages }}
+        <div class="card">
+            <a href="{{ .RelPermalink }}">
+                {{ .LinkTitle }}
+                {{ if gt (len .Pages) 0 }}
+                ({{ len .Pages }})
+                {{ end }}
+            </a>
+            <p>{{ .Summary }}</p>
+        </div>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

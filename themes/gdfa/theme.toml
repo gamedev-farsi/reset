@@ -1,0 +1,12 @@
+name = 'GDFA'
+license = 'MIT'
+licenselink = 'https://github.com/gamedev-farsi/hugo-theme/LICENSE'
+description = 'Theme description'
+homepage = 'https://github.com/gamedev-farsi/hugo-theme'
+demosite = 'https://gamedev-farsi.github.io/hugo-theme'
+tags = ['gamedevfarsi', 'gdfa']
+features = ['minimal', 'soon :)']
+
+[author]
+name = 'GameDevFarsi'
+homepage = 'https://gamedevfarsi.com'

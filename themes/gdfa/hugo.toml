@@ -1,0 +1,31 @@
+baseURL = 'https://gamedev-farsi.github.io/hugo-theme/'
+languageCode = 'fa'
+title = 'قالب GameDevFarsi'
+
+defaultContentLanguage = 'fa'
+buildDrafts=true
+
+[Languages]
+  [Languages.fa]
+  languageCode = "fa"
+  languageDirection = "rtl"
+  
+[[menus.main]]
+name = 'صفحه اصلی'
+pageRef = '/'
+weight = 10
+
+[[menus.main]]
+name = 'پست ها'
+pageRef = '/posts'
+weight = 20
+
+[[menus.main]]
+name = 'تگ ها'
+pageRef = '/tags'
+weight = 30
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.116.0"

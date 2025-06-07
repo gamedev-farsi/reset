@@ -1,0 +1,16 @@
+{{ define "main" }}
+<div class="container">
+  <h1 class="title">{{ .Title }}</h1>
+  <p>{{ .Content }}</p>
+  <div class="container-grid">
+    {{ range .Paginator.Pages }}
+    <div class="card">
+      <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+      <p>{{ .Summary }}</p>
+    </div>
+    {{ end }}
+  </div>
+  <hr />
+  {{ template "_internal/pagination.html" . }}
+</div>
+{{ end }}

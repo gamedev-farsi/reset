@@ -1,0 +1,11 @@
+:root {
+  --primary-color: #32d6a4;
+}
+
+.author {
+  margin: 3px auto;
+  max-width: 600px;
+  font-size: 8pt;
+  color: var(--primary-color);
+  font-style: italic;
+}

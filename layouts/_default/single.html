@@ -1,0 +1,13 @@
+{{ define "main" }}
+<div class="container">
+    <h1># شماره {{ .Params.number }} / 365</h1>
+    {{ .Content }}
+    <p class="author">author: {{ .Params.author }}</p>
+    <p>
+        <img src="/attachments/{{.Params.number}}.png" width="600" />
+    </p>
+
+    <a href="/" class="button">بازگشت</a>
+    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+</div>
+{{ end }}
